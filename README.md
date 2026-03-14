@@ -25,6 +25,7 @@ This lab simulates a real-world enterprise Azure environment where network segme
 - Windows 11 Pro | Domain-joined Win11 client
 
 
+
 **Documentation**
 
 Detailed documentation for each component is available in the subdirectories: 
