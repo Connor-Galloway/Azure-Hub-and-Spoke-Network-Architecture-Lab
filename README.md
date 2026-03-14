@@ -23,3 +23,20 @@ This lab simulates a real-world enterprise Azure environment where network segme
 - Windows Server 2025 Data Center | Domain Controller for Lab
   
 - Windows 11 Pro | Domain-joined Win11 client
+
+
+**Documentation**
+
+Detailed documentation for each component is available in the subdirectories: 
+
+- Firewall
+
+- Routing
+
+- Diagram
+
+- Networking
+
+- Virtual Machines
+
+  
