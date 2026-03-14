@@ -40,4 +40,16 @@ Detailed documentation for each component is available in the subdirectories:
 
 - Virtual Machines
 
+
+**Goals**
+
+- Design and deploy a hub-and-spoke network topology following proper best practices
+
+- Implement centralized traffic inspection across VNet boundaries using Azure Firewall as the single point of enforcement
+
+- Demonstrate forced routing via UDR's, ensuring no inter-spoke traffic bypasses the firewall
+
+- Deploy and configure a small Active Directory Domain Services environment to demonstrate successful connection across segmented VNets
+
+- Validate network routing decisions using Azure Network Watcher and confirm firwall enforcement through Log Analytics
   
