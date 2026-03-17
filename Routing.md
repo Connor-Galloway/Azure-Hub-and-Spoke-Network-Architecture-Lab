@@ -19,4 +19,4 @@ Routing was verified using Azure Network Watcher — Next Hop. With WIN11-CLIENT
 
 ![NextHop](images/Firewall/fw_nexthop.png)
 
-This confirms all inter-spoke traffic is forced through the Azure Firewall before reaching its destination. For further confirmation, I utilized firewall traffic logs to show all traffic between spoke 1, spoke 2, and the firewall. Firewall logs are shown inside of the [Firewall](Firewall) folder of this repository. 
+This confirms all inter-spoke traffic is forced through the Azure Firewall before reaching its destination. For further confirmation, I utilized firewall traffic logs to show all traffic between spoke 1, spoke 2, and the firewall. Firewall logs are shown inside of the [Firewall](Firewall.md) folder of this repository. 
