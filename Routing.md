@@ -7,3 +7,7 @@ This section covers the User Defined Routes (UDRs) configured to enforce traffic
 **Spoke 1 Route Table**
 
 ![UDRSpoke1](images/Routing/spoke1_route_table.png)
+
+**Spoke 2 Route Table**
+
+![UDRSpoke2](images/Routing/spoke2_route_table.png)
