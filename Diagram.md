@@ -2,7 +2,7 @@
 
 **Overview**
 
-This diagram illustrates the hub-and-spoke network topology deployed in Microsoft Azure. It details the relationship between the three VNets, the centralized security components housed in the hub, and the products running in and for each spoke.
+This diagram illustrates the hub-and-spoke network topology deployed in Microsoft Azure. It details the relationship between the three VNets, the centralized security components housed in the hub, and the workloads running in and for each spoke.
 
 **Architecture Summary** 
 
