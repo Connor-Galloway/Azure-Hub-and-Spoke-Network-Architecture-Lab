@@ -15,3 +15,26 @@ This photo shows the overview of the Azure Firewall. On the right hand side, you
 
 ![Firewall Overview](images/Firewall/firewall_overview.png)
 
+**Firewall Rule Collection**
+
+A single network rule collection named "allow-ad-traffic" was created to permit the ports required for Active Directory communication between the spokes.
+
+![Firewall Rules](images/Firewall/firewall_network_rule.png)
+
+![Firewall Rules Expanded](images/Firewall/firewall_network_rules_expanded.png)
+
+
+**Why these ports?**
+
+Active Directory domain join requires more than just basic connectivity. Each port serves a specific purpose in the authentication and communication process: 
+
+Port 53 - DNS | Required for domain name resolution
+
+Port 88 - Kerberos | The authentication protocol used by Active Directory
+
+Port 135 - RPC Endpoint Mapper | Directs clients to the correct service port
+
+Port 389 - LDAP | Used to query Active Directory for domain information
+
+Port 445 - SMB | Used for file sharing and group policy
+
