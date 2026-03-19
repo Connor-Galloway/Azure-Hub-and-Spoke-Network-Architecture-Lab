@@ -7,3 +7,10 @@ Azure Firewall is deployed in the hub VNet as the central security enforcement p
 **How It Works**
 
 Azure Firewall sits in its own dedicated subnet (AzureFirewallSubnet 10.0.2.0/26) inside the hub VNet. When a packet leaves WIN11-CLIENT01 destined for DC01, the User Defined Route on subnet-spoke2 intercepts it and forwards it to the firewall's private IP (10.0.2.4) instead of routing it directly. The firewwall then evaluates the packet against its rule collections. If a matching allow rule exists, the traffic is forwarded, if not, it is dropped by default. This default-deny behavior means no inter-spoke communication is permitted unless explicitly allowed. 
+
+
+**Firewall Overview**
+
+This photo shows the overview of the Azure Firewall. On the right hand side, you will see the SKU, the subnet the firewall lives in, its management subnet,and public and private IP addresses. 
+
+![Firewall Overview](images/Firewall/firewall_overview.png)
