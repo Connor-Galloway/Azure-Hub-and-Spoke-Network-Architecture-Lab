@@ -11,6 +11,7 @@ Azure Firewall sits in its own dedicated subnet (AzureFirewallSubnet 10.0.2.0/26
 
 **Firewall Overview**
 
-This photo shows the overview of the Azure Firewall. On the right hand side, you will see the SKU, the subnet the firewall lives in, its management subnet,and public and private IP addresses. 
+This photo shows the overview of the Azure Firewall. On the right hand side, you will see the SKU, the subnet the firewall lives in, the management subnet, and public and private IP addresses. 
 
 ![Firewall Overview](images/Firewall/firewall_overview.png)
+
