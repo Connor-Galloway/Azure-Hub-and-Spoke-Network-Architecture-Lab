@@ -38,3 +38,5 @@ Port 389 - LDAP | Used to query Active Directory for domain information
 
 Port 445 - SMB | Used for file sharing and group policy
 
+491521-65535 - Dynamic RPC Ports | The RPC Endpoint Mapper on port 135 redirects clients to a randomly assigned high port for the actual session. Without this range open, domain join silently fails even when all other ports are allowed.
+
