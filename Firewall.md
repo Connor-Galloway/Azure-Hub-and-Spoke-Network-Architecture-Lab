@@ -45,11 +45,11 @@ Port 445 - SMB | Used for file sharing and group policy
 
 A Log Analytics workspace (workspace-hub) was configured to capture firewall network rule logs. Traffic flowing between the spokes can be confirmed using the methods shown in the photos below: 
 
-Next Hop
+**Next Hop**
 
 ![Next Hop](images/Firewall/fw_nexthop.png)
 
-Firewall Logs
+**Firewall Logs**
 
 For deeper traffic analysis, the following query was ran to confirm traffic between the firewall and the spokes: 
 
