@@ -40,3 +40,17 @@ Port 445 - SMB | Used for file sharing and group policy
 
 491521-65535 - Dynamic RPC Ports | The RPC Endpoint Mapper on port 135 redirects clients to a randomly assigned high port for the actual session. Without this range open, domain join silently fails even when all other ports are allowed.
 
+
+**Monitoring**
+
+A Log Analytics workspace (workspace-hub) was configured to capture firewall network rule logs. Traffic flowing between the spokes can be confirmed using the methods shown in the photos below: 
+
+**Next Hop**
+
+![Next Hop](images/Firewall/fw_nexthop.png)
+
+**Firewall Logs**
+
+For deeper traffic analysis, the following query was ran to confirm traffic between the firewall and the spokes: 
+
+![fw-logs](images/Firewall/firewall_traffic_log.png)
