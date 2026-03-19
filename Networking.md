@@ -1,8 +1,8 @@
 # Networking
 
-## Overview
+**Overview**
 
-Three Virtual Networks form the foundation of this lab. The hub VNet acts as the central transit point while the two spoke VNets host the workloads. All VNets are connected via VNet peering with traffic between spokes enforced through the hub firewall.
+Three virtual networks form the foundation of this lab. The hub VNet acts as the central transit point while the two spoke VNets host the workloads. All VNets are connected via VNet peering with traffic between spokes enforced through the hub firewall.
 
 
 **Hub VNet**
