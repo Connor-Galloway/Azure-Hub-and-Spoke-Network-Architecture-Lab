@@ -10,7 +10,7 @@ This lab simulates a real-world enterprise Azure environment where network segme
   
 - Azure Firewall (Standard) | Centralized traffic inspection
   
-- Azure Bastion | Secure RDP/SSH, no public IP's on VM's
+- Azure Bastion | Secure RDP/SSH, no public IPs on VMs
   
 - User Defined Routes | Force traffic through firewall as next hop
   
@@ -51,5 +51,5 @@ Detailed documentation for each component is available in the subdirectories:
 
 - Deploy and configure a small Active Directory Domain Services environment to demonstrate successful connection across segmented VNets
 
-- Validate network routing decisions using Azure Network Watcher and confirm firwall enforcement through Log Analytics
+- Validate network routing decisions using Azure Network Watcher and confirm firewall enforcement through Log Analytics
   
