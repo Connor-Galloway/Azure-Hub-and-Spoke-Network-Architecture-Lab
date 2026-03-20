@@ -6,7 +6,7 @@ Azure Firewall is deployed in the hub VNet as the central security enforcement p
 
 **How It Works**
 
-Azure Firewall sits in its own dedicated subnet (AzureFirewallSubnet 10.0.2.0/26) inside the hub VNet. When a packet leaves WIN11-CLIENT01 destined for DC01, the User Defined Route on subnet-spoke2 intercepts it and forwards it to the firewall's private IP (10.0.2.4) instead of routing it directly. The firewwall then evaluates the packet against its rule collections. If a matching allow rule exists, the traffic is forwarded, if not, it is dropped by default. This default-deny behavior means no inter-spoke communication is permitted unless explicitly allowed. 
+Azure Firewall sits in its own dedicated subnet (AzureFirewallSubnet 10.0.2.0/26) inside the hub VNet. When a packet leaves WIN11-CLIENT01 destined for DC01, the User Defined Route on subnet-spoke2 intercepts it and forwards it to the firewall's private IP (10.0.2.4) instead of routing it directly. The firewall then evaluates the packet against its rule collections. If a matching allow rule exists, the traffic is forwarded, if not, it is dropped by default. This default-deny behavior means no inter-spoke communication is permitted unless explicitly allowed. 
 
 
 **Firewall Overview**
@@ -38,7 +38,7 @@ Port 389 - LDAP | Used to query Active Directory for domain information
 
 Port 445 - SMB | Used for file sharing and group policy
 
-491521-65535 - Dynamic RPC Ports | The RPC Endpoint Mapper on port 135 redirects clients to a randomly assigned high port for the actual session. Without this range open, domain join silently fails even when all other ports are allowed.
+49152-65535 - Dynamic RPC Ports | The RPC Endpoint Mapper on port 135 redirects clients to a randomly assigned high port for the actual session. Without this range open, domain join silently fails even when all other ports are allowed.
 
 
 **Monitoring**
