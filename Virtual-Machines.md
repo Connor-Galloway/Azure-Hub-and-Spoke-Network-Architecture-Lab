@@ -8,13 +8,13 @@ Two virtual machines are deployed across the spoke VNets. DC01 serves as the Act
 
 DC01 is a Windows Server 2025 Datacenter VM deployed in vnet-spoke1 at private IP 10.1.1.4. It runs Active Directory Domain Services and acts as the DNS server for the entire lab environment.
 
-![DC01 Overview](images/virtual%20machines/dc01_overview.png)
+![DC01 Overview](images/Virtual%20Machines/dc01_overview.png)
 
 **Network Settings**
 
 DC01's NIC is configured with a static private IP of 10.1.1.4. DNS is set to 127.0.0.1 (loopback) which is expected and correct behavior for a Domain Controller — it resolves DNS queries locally since it is the DNS server.
 
-![DC01 NIC IP Config](images/virtual%20machines/dc01_nic_ipconfig.png)
+![DC01 NIC IP Config](images/Virtual%20Machines/dc01_nic_ipconfig.png)
 
 ![DC01 Network Settings](images/virtual%20machines/dc01_network_settings.png)
 
