@@ -24,7 +24,7 @@ resource "azurerm_windows_virtual_machine" "dc01" {
   resource_group_name = azurerm_resource_group.rg.name
   size                = "Standard_D2s_v3"
   admin_username      = var.admin_username
-  admin_password      = var.admin_password
+  admin_password      = azurerm_key_vault_secret.admin_password.value
 
   network_interface_ids = [azurerm_network_interface.dc01.id]
 
@@ -63,7 +63,7 @@ resource "azurerm_windows_virtual_machine" "win11" {
   resource_group_name = azurerm_resource_group.rg.name
   size                = "Standard_D2s_v3"
   admin_username      = var.admin_username
-  admin_password      = var.admin_password
+  admin_password      = azurerm_key_vault_secret.admin_password.value
 
   network_interface_ids = [azurerm_network_interface.win11.id]
 

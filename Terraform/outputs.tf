@@ -1,5 +1,10 @@
 # outputs.tf
 
+output "key_vault_name" {
+  description = "Name of the Key Vault storing secrets"
+  value       = azurerm_key_vault.hub.name
+}
+
 output "firewall_private_ip" {
   description = "Private IP address of the Azure Firewall"
   value       = azurerm_firewall.hub.ip_configuration[0].private_ip_address
