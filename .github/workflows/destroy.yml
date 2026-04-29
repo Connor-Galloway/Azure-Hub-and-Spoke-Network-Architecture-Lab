@@ -3,21 +3,20 @@ name: Destroy Terraform Infrastructure
 on:
   workflow_dispatch:
     inputs:
-      confirm:
-        description: "Type 'destroy' to confirm deletion"
+      action:
+        description: "Type 'plan' or 'destroy'"
         required: true
+        default: "plan"
 
 env:
   TERRAFORM_VERSION: 1.0
   WORKING_DIR: ./Terraform
 
 jobs:
-  destroy:
-    name: Terraform Destroy
+  plan-destroy:
+    name: Destroy Plan (SAFE)
     runs-on: ubuntu-latest
-
-    # Safety check so it ONLY runs if typed correctly
-    if: github.event.inputs.confirm == 'destroy'
+    if: github.event.inputs.action == 'plan'
 
     steps:
       - name: Checkout code
@@ -36,14 +35,35 @@ jobs:
           ARM_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
           ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
           ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
-          ARM_ACCESS_KEY: ${{ secrets.AZURE_STORAGE_ACCESS_KEY }}
 
-      - name: Terraform Destroy
-        run: terraform destroy -auto-approve -var="admin_password=${{ secrets.ADMIN_PASSWORD }}"
+      - name: Terraform Destroy Plan
+        run: terraform plan -destroy
+        working-directory: ${{ env.WORKING_DIR }}
+
+  destroy:
+    name: Destroy Infrastructure (DANGEROUS)
+    runs-on: ubuntu-latest
+    if: github.event.inputs.action == 'destroy'
+    environment: production
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v2
+        with:
+          terraform_version: ${{ env.TERRAFORM_VERSION }}
+
+      - name: Terraform Init
+        run: terraform init
         working-directory: ${{ env.WORKING_DIR }}
         env:
           ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
           ARM_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
           ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
           ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
-          ARM_ACCESS_KEY: ${{ secrets.AZURE_STORAGE_ACCESS_KEY }}
+
+      - name: Terraform Destroy
+        run: terraform destroy -auto-approve
+        working-directory: ${{ env.WORKING_DIR }}
