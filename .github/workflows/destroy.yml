@@ -59,7 +59,7 @@ jobs:
     name: Destroy Infrastructure (DANGEROUS)
     runs-on: ubuntu-latest
     if: github.event.inputs.action == 'destroy'
-    environment: production
+    
 
     env:
      TF_VAR_admin_password: ${{ secrets.ADMIN_PASSWORD }}
