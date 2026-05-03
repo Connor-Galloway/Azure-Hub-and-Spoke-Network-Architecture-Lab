@@ -60,9 +60,7 @@ Detailed documentation for each component is available in the subdirectories:
 
 - Validate network routing decisions using Azure Network Watcher and confirm firewall enforcement through Log Analytics
 
-**Terraform Automation**
 
-- This project also showcases 
 
 
   
