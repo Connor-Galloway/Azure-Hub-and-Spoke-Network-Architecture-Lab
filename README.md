@@ -62,6 +62,8 @@ Detailed documentation for each component is available in the subdirectories:
 
 - An Azure Key Vault is added to house the admin login for both virtual machines
 
-- Secrets are passed through GitHub secrets, never hard coded 
+- Secrets are passed through GitHub secrets, never hard coded
+
+- Azure account is authenticated through OIDC
 
   
