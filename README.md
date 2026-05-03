@@ -40,13 +40,6 @@ Detailed documentation for each component is available in the subdirectories:
 
 - Virtual Machines
 
-**Terraform Automation**
-
-- This project also showcases a full working automated deployment pipeline using Terraform, VS Code, and GitHub actions
-
-- Each type of resource is split up into different .tf files for easy viewing access
-
-- An Azure Key Vault is added to house the admin login for both virtual machines
 
 **Goals**
 
@@ -61,6 +54,14 @@ Detailed documentation for each component is available in the subdirectories:
 - Validate network routing decisions using Azure Network Watcher and confirm firewall enforcement through Log Analytics
 
 
+**NEW ADDITION | Terraform Automation**
 
+- This project now showcases a full working automated deployment pipeline using Terraform, VS Code, and GitHub actions
+
+- Each type of resource is split up into different .tf files for easy viewing access
+
+- An Azure Key Vault is added to house the admin login for both virtual machines
+
+- Secrets are passed through GitHub secrets, never hard coded 
 
   
