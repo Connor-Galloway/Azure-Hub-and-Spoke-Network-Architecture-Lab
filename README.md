@@ -66,4 +66,8 @@ Detailed documentation for each component is available in the subdirectories:
 
 - Azure account is authenticated through OIDC
 
+- Two .yml files for deployment and destruction. The destruction .yml only runs on manual push. Upon running the destroy workflow, the user must enter either "plan" or "destroy"
+
+- Typing "plan" shows what will be deleted, typing "destroy" fully deletes the Hub and Spoke network
+
   
